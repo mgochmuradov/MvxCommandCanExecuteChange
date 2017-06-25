@@ -3,6 +3,8 @@ using System.Windows;
 using MvvmCross.Core.ViewModels;
 using MvvmCross.Platform;
 using MvvmCross.Wpf.Views;
+using MvxCommandTest.Core.Commands;
+using MvxCommandTest.Pc.Commands;
 
 namespace MvxCommandTest.Pc
 {
@@ -18,6 +20,8 @@ namespace MvxCommandTest.Pc
 
             var setup = new Setup(Dispatcher, presenter);
             setup.Initialize();
+
+            Mvx.RegisterType<ICommandHelper, WpfCommandHelper>();
 
             var start = Mvx.Resolve<IMvxAppStart>();
             start.Start();

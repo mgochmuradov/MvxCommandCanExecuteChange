@@ -1,6 +1,6 @@
-using System.Threading.Tasks;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using MvxCommandTest.Core.Commands;
 
 namespace MvxCommandTest.Core.ViewModels
 {
@@ -10,20 +10,18 @@ namespace MvxCommandTest.Core.ViewModels
         public bool AllowExecution
         {
             get { return _allowExecution; }
-            set { SetProperty(ref _allowExecution, value); }
+            set
+            {
+                SetProperty(ref _allowExecution, value);
+                ((Command)DoWorkCommand).RaiseCanExecuteChanged();
+            }
         }
 
         public ICommand DoWorkCommand =>
-            new MvxCommand(() =>
-            {
-                AllowExecution = false;
-            });
-
-        public ICommand DoAsyncWorkCommand =>
-            new MvxAsyncCommand(() =>
-            {
-                AllowExecution = false;
-                return Task.FromResult(true);
-            });
+            new Command(DoWork, () => AllowExecution);
+        private void DoWork()
+        {
+            AllowExecution = false;
+        }
     }
 }
