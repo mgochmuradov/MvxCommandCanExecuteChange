@@ -10,8 +10,10 @@
     <Grid>
         <StackPanel>
             <CheckBox IsChecked="{Binding AllowExecution, UpdateSourceTrigger=PropertyChanged}">Allow Execution</CheckBox>
-            <Button Content="Do Work" Command="{Binding DoWorkCommand }" />
-            <Button Content="Do Async Work" Command="{Binding DoAsyncWorkCommand }" />
+            <Button Content="Do Work" Command="{Binding DoWorkCommand }"
+                    IsEnabled="{Binding AllowExecution, Mode=OneWay}"/>
+            <Button Content="Do Async Work" Command="{Binding DoAsyncWorkCommand }"
+                    IsEnabled="{Binding AllowExecution, Mode=OneWay}"/>
         </StackPanel>
     </Grid>
 </views:MvxWpfView>
