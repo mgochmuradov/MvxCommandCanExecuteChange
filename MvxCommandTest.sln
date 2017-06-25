@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxCommandTest.Pc", "MvxCommandTest.Pc\MvxCommandTest.Pc.csproj", "{59D6376C-37A0-46B1-8A07-99B99DDA0063}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvxCommandTest.Core", "MvxCommandTest.Core\MvxCommandTest.Core.csproj", "{87F274C0-0FB4-4CC7-876E-6D3DBB9A61AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59D6376C-37A0-46B1-8A07-99B99DDA0063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59D6376C-37A0-46B1-8A07-99B99DDA0063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59D6376C-37A0-46B1-8A07-99B99DDA0063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59D6376C-37A0-46B1-8A07-99B99DDA0063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87F274C0-0FB4-4CC7-876E-6D3DBB9A61AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87F274C0-0FB4-4CC7-876E-6D3DBB9A61AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87F274C0-0FB4-4CC7-876E-6D3DBB9A61AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87F274C0-0FB4-4CC7-876E-6D3DBB9A61AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
